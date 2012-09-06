@@ -1,0 +1,8 @@
+C:>traceroute wedding
+traceroute to wedding, 10 hope max, 40 byte packets using coordinates
+ 1 start.wedding (38°53′10.89″, 45°11′9.39″) 7 200 000 ms
+ 2 bride.wedding (38°04′51″, 45°21′12.39″) 9 000 000 ms
+ 3 registry.wedding (38°08′33.44″, 45°10′28.35″) 1 800 000 ms
+ 4 photoTour.wedding (38°50′59.1″, 45°20′53.56″) 14 400 000 ms
+ 5 * * *
+ 6 wedding (38°37′12.28″, 45°10′13.68″) 21 600 000 ms

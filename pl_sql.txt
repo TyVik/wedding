@@ -1,0 +1,11 @@
+CREATE PROCEDURE wedding AS
+BEGIN
+INSERT INTO Calendar(Event, Description, Date, WithWife) VALUES
+  ('Свадьба', 'Приглашаем вас отметить сие событие', to_date('10/09/2011', 'dd/mm/yyyy', ), True) RETURNING ID INTO v_id;
+INSERT INTO CalendarDescription(idCalendar, EventTime, EventDescription) VALUES
+  (v_id, to_timestemp('DD/MM/YYYY HH24:Mi', '10/09/2011 8:00'), 'сбор и наряжение машин'),
+  (v_id, to_timestemp('DD/MM/YYYY HH24:Mi', '10/09/2011 10:00'), 'выкуп'),
+  (v_id, to_timestemp('DD/MM/YYYY HH24:Mi', '10/09/2011 12:30'), 'регистрация'),
+  (v_id, to_timestemp('DD/MM/YYYY HH24:Mi', '10/09/2011 13:00'), 'прогулка'),
+  (v_id, to_timestemp('DD/MM/YYYY HH24:Mi', '10/09/2011 17:00'), 'кафе');
+END;

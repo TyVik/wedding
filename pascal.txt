@@ -1,0 +1,18 @@
+program wedding;
+const
+  invited = 'Guest';
+  dateWedding = '10.09.2011';
+  times: array [0..4] of String = ('8:00', '10:00', '12:30', '13:00', '17:00');
+  descriptions: array [0..4] of String = ('начало', 'выкуп', 'регистрация', 'прогулка', 'кафе');
+var
+  i: Integer;
+begin
+  writeln('Приглашение!');
+  writeln(Format('%s, приглашаем вас отпраздновать создание нашей семьи! Сие долгожданное событие состоится %s.', [invited, dateWedding]));
+  writeln('План таков:');
+  if length(times) <> length(description) then
+    raise Exception.Create('Неверное расписание');
+  for i := Low(times) to High(times) do begin
+    writeln(Format(' %d. %s - %s', [i + 1, times[i], descriptions[i]]));
+  end;
+end.
